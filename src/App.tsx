@@ -1,4 +1,4 @@
-import urlJoin from 'url-join';
+import urlJoin from 'proper-url-join';
 import mime from 'mime';
 import moment from 'moment';
 import {createResource, createSignal, ErrorBoundary, For, Show} from 'solid-js';
@@ -61,7 +61,8 @@ function getIcon(f: File)
 
 function getHref(f: File)
 {
-  return getType(f) == "directory" ? (urlJoin(fullPath, f.name) + "/") : urlJoin(host, filePath, f.name)
+  console.log(host, filePath, f);
+  return getType(f) == "directory" ? (urlJoin(fullPath, f.name) + "/") : urlJoin(filePath, f.name)
   // return urlJoin(fullPath, f.name)
 }
 

@@ -27,6 +27,6 @@
     "solid-js": "^1.6.10",
     "string-similarity": "^4.0.4",
     "tippy.js": "^6.3.7",
-    "url-join": "^5.0.0"
+    "proper-url-join": "^2.1.1"
   }
 }
